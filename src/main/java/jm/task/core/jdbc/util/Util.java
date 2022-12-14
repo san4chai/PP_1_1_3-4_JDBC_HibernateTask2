@@ -47,7 +47,7 @@ public class Util {
 
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-                settings.put(Environment.HBM2DDL_AUTO, "");
+                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
 
                 Configuration configuration = new Configuration();
 
@@ -64,30 +64,4 @@ public class Util {
         }
         return sessionFactory;
     }
-
-//    private static final SessionFactory sessionFactory;
-//    static {
-//        try {
-//            Properties prop = new Properties();
-//            prop.setProperty("hibernate.connection.url", "jdbc:mysql://192.168.0.101:3306/go");
-//            prop.setProperty("hibernate.connection.username", "go");
-//            prop.setProperty("hibernate.connection.password", "go");
-//            prop.setProperty("dialect", "org.hibernate.dialect.MySQLDialect");
-//
-//            prop.setProperty("hibernate.hbm2ddl.auto", "create");
-//
-//            sessionFactory = (SessionFactory) new org.hibernate.cfg.Configuration()
-//                    .addProperties(prop)
-//                    //.addPackage("com.kat")
-//                    .addAnnotatedClass(User.class)
-//                    .buildSessionFactory()
-//            ;
-//        }
-//        catch (Exception ex) {
-//            throw new ExceptionInInitializerError(ex);
-//        }
-//    }
-//    public static Session getSession() throws HibernateException {
-//        return sessionFactory.openSession();
-//    }
 }

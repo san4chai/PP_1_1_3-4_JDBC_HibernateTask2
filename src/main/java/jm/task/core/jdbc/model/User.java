@@ -3,7 +3,6 @@ package jm.task.core.jdbc.model;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 
-@Transactional
 @Entity
 @Table(name="users")
 public class User {
